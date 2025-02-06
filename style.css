@@ -431,27 +431,33 @@
 }
 
 .footer__container {
-    background-color: #6a5acd; /* Same color as the navbar */
-    padding: 0.25rem 0; /* Further reduce padding to make footer smaller */
+    background-color: #6a5acd; /* Keep same color as navbar */
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center the content */
-    align-items: center;
-    border-top: 2px solid #4b0082; /* Add border to footer */
-    width: 100%; /* Stretch to the whole screen */
-    padding: 0 50px;
+    justify-content: center; /* Center the links */
+    align-items: center; /* Align all items vertically */
+    border-top: 2px solid #4b0082; /* Add border */
+    width: 100%;
+    padding: 20px 50px; /* Adjust padding */
+    position: relative; /* Needed for absolute positioning of logo */
 }
 
-// Remove the footer logo
 #footer__logo {
-    display: none;
+    display: block;
+}
+
+.footer__logo {
+    color: #fff; /* White text */
+    font-size: 2rem;
+    cursor: default; /* Make unclickable */
+    position: absolute;
+    left: 30px; /* Position it on the left */
+    top: 20%;
+    transform: translateY(-50%); /* Center vertically */
 }
 
 .footer__links {
-    width: 100%;
-    max-width: 1000px;
     display: flex;
-    justify-content: center; /* Center the footer links */
+    gap: 20px; /* Adjust spacing between links */
 }
 
 .footer__link--wrapper {
