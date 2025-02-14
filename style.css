@@ -1,12 +1,16 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    background-color: #f0f0f0; /* Light grey background */
+}
+
 .navbar {
-    background: #6a5acd;
+    background: linear-gradient(90deg, #6a5acd, #4b0082); /* Gradient background */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -16,9 +20,10 @@
     top: 0;
     z-index: 1000;
     border-bottom: 2px solid #4b0082;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
-.navbar__container{
+.navbar__container {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -61,6 +66,11 @@
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+    transition: color 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #dda0dd; /* Light purple hover */
 }
 
 .navbar__btn {
@@ -84,16 +94,11 @@
     border-radius: 4px;
     background: #f77062;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #dda0dd; /* Light purple hover */
-    transition: all 0.3s ease;
-}
-
-.navbar__links:hover {
-    color: #dda0dd; /* Light purple hover */
-    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 960px) {
@@ -194,7 +199,8 @@
 .main {
     background-color: #fff; /* White background */
     color: #4b0082; /* Dark purple text */
-    padding: 50px 0;
+    padding: 20px 0; /* Reduce vertical padding */
+    margin-bottom: 60px; /* Add margin below the main section */
 }
 
 .main__container {
@@ -214,17 +220,17 @@
 }
 
 .main__content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #4b0082; /* Dark purple text */
 }
 
 .main__content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #4b0082; /* Dark purple text */
 }
 
 .main__content p {
-    margin-top: 1rem;
+    margin-top: 0rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: #4b0082; /* Dark purple text */
@@ -238,7 +244,7 @@
 }
 
 .main__btn {
-    font-size: 1rem;
+    font-size: 2rem;
     background-color: #6a5acd; /* Darker purple background */
     padding: 14px 32px;
     border: none;
@@ -279,10 +285,11 @@
 }
 
 #main__img {
-    height: 80%;
-    width: 80%;
+    height: 50%;
+    width: 50%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10rem;
 }
 
 @media screen and (max-width: 786px) {
@@ -296,7 +303,6 @@
         height: 90vh;
     }
 
-
     .main__content {
         text-align: center;
         margin-bottom: 4rem;
@@ -309,7 +315,7 @@
 
     .main__content h2 {
         font-size: 3rem;
-        }
+    }
 
     .main__content p {
         margin-top: 1rem;
@@ -317,7 +323,7 @@
     }
 }
 
-@media  and (max-width: 480px) {
+@media and (max-width: 480px) {
     .main__content h1 {
         font-size: 2rem;
         margin-top: 3rem;
@@ -325,7 +331,7 @@
 
     .main__content h2 {
         font-size: 2rem;
-        }
+    }
 
     .main__content p {
         margin-top: 2rem;
@@ -338,6 +344,24 @@
     }
 }
 
+.recent-project {
+    background-color: #fff; /* White background */
+    color: #4b0082; /* Dark purple text */
+    padding: 0px 0; /* Reduce vertical padding */
+    text-align: center;
+    margin-bottom: 200px; /* Add margin below the recent projects section */
+}
+
+.recent-project h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .portfolio {
     background: #fff; /* White background */
@@ -345,77 +369,65 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    margin-bottom: 5px; /* Reduce margin below the portfolio section */
 }
 
 .portfolio h1 {
     color: #4b0082; /* Dark purple text */
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
+    margin-bottom: 0rem;
+    font-size: 6rem;
 }
-
 
 .portfolio__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Ensure space between cards */
     flex-wrap: wrap;
+    width: 100%; /* Ensure container takes full width */
 }
 
 .portfolio__card {
     margin: 1rem;
-    height: 525px;
-    width: 400px;
+    flex: 1 1 45%; /* Make each card take up nearly half of the screen size */
     border-radius: 10px; /* Increase border radius */
     background-color: #dda0dd; /* Light purple background */
     position: relative;
     color: #4b0082; /* Dark purple text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    min-width: 45%; /* Ensure minimum width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(75, 0, 130, 0.6) 100%), url('images/pic3.jpg');
+.portfolio__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio h2 {
-    position: absolute;
-    top: 350px;
+.portfolio__iframe-link {
+    display: block;
+    position: relative;
 }
 
- .portfolio__card p {
-    position: absolute;
-    top: 400px;
-    left: 30px;
- }
-
- .portfolio__card button {
-    color: #fff; /* White text */
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #4b0082; /* Dark purple background */
-    position: absolute;
-    top: 440px;
-    left: 30px;
-    font-size: 1rem;
-    cursor: pointer;
- }
-
- .portfolio__card:hover {
-    transform: scale(1.075);
-    transition: 0.2s ease-in;
-    cursor: pointer;
- }
-
- .portfolio__iframe {
+.portfolio__iframe {
     width: 100%;
-    height: 300px;
+    height: 600px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    margin-bottom: 1rem; /* Add margin below iframe */
- }
+    margin-bottom: 0rem; /* Add margin below iframe */
+    pointer-events: none; /* Disable iframe interaction */
+}
 
- @media  and (max-width: 960px) {
+.portfolio__iframe-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media and (max-width: 960px) {
     .portfolio {
         height: 1600px;
     }
@@ -423,7 +435,7 @@
         font-size: 2rem;
         margin-top: 12rem;
     }
- }
+}
 
 @media screen and (max-width: 480px) {
     .portfolio {
@@ -446,7 +458,7 @@
     align-items: center; /* Align all items vertically */
     border-top: 2px solid #4b0082; /* Add border */
     width: 100%;
-    padding: 10px 20px; /* Adjust padding to fit four lines of text */
+    /*padding: 5px 10px; /* Adjust padding to fit four lines of text */
     position: relative; /* Needed for absolute positioning of logo */
     height: auto; /* Ensure height adjusts to content */
 }
@@ -461,7 +473,7 @@
     cursor: default; /* Make unclickable */
     position: absolute;
     left: 30px; /* Position it on the left */
-    top: 20%;
+    top: 40%;
     transform: translateY(-50%); /* Center vertically */
 }
 
@@ -496,16 +508,21 @@
     color: #fff; /* White text */
     text-decoration: none;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 .footer__link--items a:hover {
     color: #dda0dd; /* Light purple hover */
-    transition: 0.3s ease-out;
 }
 
 .social__icon--link {
     color: #fff; /* White text */
     font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social__icon--link:hover {
+    color: #dda0dd; /* Light purple hover */
 }
 
 .social__media {
@@ -554,7 +571,7 @@
         margin-bottom: 2rem;
     }
 
-    .footer__link--wrapper{
+    .footer__link--wrapper {
         flex-direction: column;
     }
 
