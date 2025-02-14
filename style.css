@@ -6,7 +6,7 @@
 }
 
 .navbar {
-    background: #6a5acd; /* Darker purple background */
+    background: #6a5acd;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -14,8 +14,8 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 999;
-    border-bottom: 2px solid #4b0082; /* Add border to navbar */
+    z-index: 1000;
+    border-bottom: 2px solid #4b0082;
 }
 
 .navbar__container{
@@ -406,6 +406,15 @@
     cursor: pointer;
  }
 
+ .portfolio__iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-bottom: 1rem; /* Add margin below iframe */
+ }
+
  @media  and (max-width: 960px) {
     .portfolio {
         height: 1600px;
@@ -437,8 +446,9 @@
     align-items: center; /* Align all items vertically */
     border-top: 2px solid #4b0082; /* Add border */
     width: 100%;
-    padding: 20px 50px; /* Adjust padding */
+    padding: 10px 20px; /* Adjust padding to fit four lines of text */
     position: relative; /* Needed for absolute positioning of logo */
+    height: auto; /* Ensure height adjusts to content */
 }
 
 #footer__logo {
