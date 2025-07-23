@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zachary VanderPloeg</title>
+        <title>ZVDP</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome -->
     </head>
-    <body>
+    <body id="top">
         <nav class="navbar">
             <div class="navbar__container">
                 <span id="navbar__logo">Zachary VanderPloeg</span>
@@ -24,7 +24,13 @@
                         <a href="#top" class="navbar__links">Home</a>
                     </li>
                     <li class="navbar__item">
+                        <a href="#about" class="navbar__links">About</a>
+                    </li>
+                    <li class="navbar__item">
                         <a href="#portfolio" class="navbar__links">Portfolio</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#featured-project" class="navbar__links">Projects</a>
                     </li>
                     <li class="navbar__item">
                         <a href="mailto:vand1086@msu.edu" class="navbar__links">Contact</a>
@@ -33,64 +39,167 @@
             </div>
         </nav>
 
-        <div class="main">
-            <div class="main__container">
-                <div class="main__content">
-                    <h1>Zach VanderPloeg</h1>
-                    <h2>Games and Interactive Media</h2>
-                    <p>I am a student at Michigan State University. My major is Games and Interactive Media with a focus of Game Design. I am minoring in Game Development and Information Technology. I plan to become a Technical Designer.</p>
-                </div>
-                <div class="main_img--container">
-                    <img src="me.jpg" alt="Student Image" id="main__img">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1>Zachary VanderPloeg</h1>
+                        <h2>Technical Designer & Developer</h2>
+                        <p class="hero__description">Passionate about creating games and experiences through different mediums to provide entertainment. Currently majoring in Games and Interactive Media at Michigan State University.</p>
+                        <div class="hero__cta">
+                            <a href="#portfolio" class="btn btn--primary">View My Work</a>
+                            <a href="mailto:vand1086@msu.edu" class="btn btn--secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="me.jpg" alt="Zachary VanderPloeg - Technical Designer" id="hero__img">
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio" id="portfolio">
-            <h1>My Works</h1>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about__container">
+                <div class="section__header">
+                    <h2>About Me</h2>
+                    <div class="section__line"></div>
+                </div>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>I'm a student at Michigan State University, specializing in Games and Interactive Media with a focus on Game Design. I'm working towards a minor in Information Technology as well to enhance my technical skills and experiences.</p>
+                        <p>As an aspiring Technical Designer, I hope to create interesting and entertaining games and experiences while implementing code and guiding others to make my visions come to fruition.</p>
+                        <div class="skills">
+                            <div class="skill-category">
+                                <h4>Design</h4>
+                                <ul>
+                                    <li>Game Design</li>
+                                    <li>World Building</li>
+                                    <li>Story Creation</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Development</h4>
+                                <ul>
+                                    <li>Technical Design</li>
+                                    <li>Programming</li>
+                                    <li>Organization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
             <div class="portfolio__container">
-                <div class="portfolio__card">
-                    <a href="https://zvdp.itch.io/" target="_blank" class="portfolio__iframe-link">
-                        <iframe src="https://zvdp.itch.io/" class="portfolio__iframe" title="Itch.io Preview"></iframe>
-                    </a>
+                <div class="section__header">
+                    <h2>My Portfolio</h2>
+                    <div class="section__line"></div>
+                    <p class="section__subtitle">Explore my latest projects and creative work</p>
                 </div>
-                <div class="portfolio__card">
-                    <a href="https://www.artstation.com/zvdp" target="_blank" class="portfolio__iframe-link">
-                        <iframe src="https://www.artstation.com/zvdp" class="portfolio__iframe" title="ArtStation Preview"></iframe>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="recent-project" id="recent-project">
-            <h1>Recent Project</h1>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HKHlcLlwzts " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="footer__container">
-            <div class="footer__logo" style="color: #fff; font-size: 2rem; margin-right: auto; display: flex; align-items: flex-end; height: 100%;">Zach VanderPloeg</div> <!-- Adjust footer logo -->
-            <div class="footer__links">
-                <div class="footer__link--wrapper">
-                    <div class="footer__link--items">
-                        <h2>Socials</h2>
-                        <a href="https://twitter.com/zvdp_" target="_blank" style="color: #fff;">
-                            <i class="fab fa-twitter"></i> <!-- Twitter logo -->
-                        </a>
-                        <a href="https://www.youtube.com/@zvdpdev" target="_blank" style="color: #fff;">
-                            <i class="fab fa-youtube"></i> <!-- YouTube logo -->
-                        </a>
+                <div class="portfolio__grid">
+                    <div class="portfolio__item">
+                        <div class="portfolio__card">
+                            <div class="portfolio__preview">
+                                <iframe src="https://zvdp.itch.io/" class="portfolio__iframe" title="Itch.io Games Portfolio"></iframe>
+                            </div>
+                            <div class="portfolio__info">
+                                <h3>Game Development Portfolio</h3>
+                                <p>Collection of interactive games and prototypes showcasing gameplay mechanics and design principles.</p>
+                                <a href="https://zvdp.itch.io/" target="_blank" class="portfolio__link">
+                                    View on Itch.io <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer__link--items">
-                        <h2>Professional</h2>
-                        <a href="mailto:vand1086@msu.edu" style="color: #fff;">Email</a>
-                        <a href="https://www.linkedin.com/in/zachary-vanderploeg" target="_blank" style="color: #fff;">LinkedIn</a>
-                        <a href="Resume.pdf" target="_blank" style="color: #fff;">Resume</a> <!-- Make resume link a downloadable PDF -->
+                    <div class="portfolio__item">
+                        <div class="portfolio__card">
+                            <div class="portfolio__preview">
+                                <iframe src="https://www.artstation.com/zvdp" class="portfolio__iframe" title="ArtStation Creative Portfolio"></iframe>
+                            </div>
+                            <div class="portfolio__info">
+                                <h3>Creative Arts Portfolio</h3>
+                                <p>Visual designs, concept art, and creative projects demonstrating artistic and technical skills.</p>
+                                <a href="https://www.artstation.com/zvdp" target="_blank" class="portfolio__link">
+                                    View on ArtStation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section class="featured-project" id="featured-project">
+            <div class="featured-project__container">
+                <div class="section__header">
+                    <h2>Featured Project</h2>
+                    <div class="section__line"></div>
+                    <p class="section__subtitle">Showcasing my latest development work</p>
+                </div>
+                <div class="project__content">
+                    <div class="project__video">
+                        <iframe width="800" height="450" src="https://www.youtube.com/embed/HKHlcLlwzts" title="Featured Project Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project__details">
+                        <h3>Latest Game Development Project</h3>
+                        <p>Quick project working on creating a boss with different attacks as well as a fighting system for the player similar to recent popular games.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <h3>Zachary VanderPloeg</h3>
+                    <p>Technical Designer & Developer</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4>Professional</h4>
+                        <ul>
+                            <li><a href="mailto:vand1086@msu.edu">Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/zachary-vanderploeg" target="_blank">LinkedIn</a></li>
+                            <li><a href="Resume.pdf" target="_blank">Resume</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Portfolio</h4>
+                        <ul>
+                            <li><a href="https://zvdp.itch.io/" target="_blank">Itch.io</a></li>
+                            <li><a href="https://www.artstation.com/zvdp" target="_blank">ArtStation</a></li>
+                            <li><a href="https://www.youtube.com/@zvdpdev" target="_blank">YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Connect</h4>
+                        <div class="social__links">
+                            <a href="https://twitter.com/zvdp_" target="_blank" class="social__link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@zvdpdev" target="_blank" class="social__link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/zachary-vanderploeg" target="_blank" class="social__link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="footer__bottom">
+                <div class="footer__bottom-container">
+                    <p>&copy; 2025 Zachary VanderPloeg. All rights reserved.</p>
+                </div>
+            </div> -->
+        </footer>
         <script src="app.js"></script>
     </body>
 </html>
